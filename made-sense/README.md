@@ -48,4 +48,4 @@ We can easily bypass this with a simple string concatination: `cat "fla""g.txt"`
 Bingo! we get the flag: 
 `wctf{m4k1ng_vuln3r4b1l1t135}`  
   
-To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/made-functional`)! ;)
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/made-functional)! ;)
