@@ -1,11 +1,11 @@
 
-# Misc: made-sense
+# Misc: made-functional
 solvers: [L3d](https://github.com/imL3d)  
 writeup-writer: [L3d](https://github.com/imL3d)  
 ___
 **Author:** doubledelete  
 **Description:**
-> the second makejail
+> the third makejail
 
 **files (copy):** [app.py](files/app.py)  
 
