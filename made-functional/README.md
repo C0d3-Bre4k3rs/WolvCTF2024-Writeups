@@ -5,7 +5,7 @@ writeup-writer: [L3d](https://github.com/imL3d)
 ___
 **Author:** doubledelete  
 **Description:**
-> the third makejail
+> the second makejail
 
 **files (copy):** [app.py](files/app.py)  
 
@@ -27,4 +27,5 @@ After looking at all the builtin commands we find the one that can help us in th
 Source will try to run the files content and parse it as shell commands - when it will fail it will print the error of the command he didn't find... which is our flag. Payload:  
 `source flag.txt`  
 Stderr output:  `b'flag.txt: line 1: wctf{m4k1ng_f1l3s}: No such file or directory\nmake: *** [Makefile:5: all] Error 127\n' `  
-To the next one! ;)
+  
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/made-harder)! ;)
