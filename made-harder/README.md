@@ -21,7 +21,7 @@ Essentially, a Make jail.
 This challenge seems very similar to the previous ones. It has few minor changes:  
 1. The restrictions on the content are different, we are only allowed to use the special characters: `!@#$%^&*()[]{}<> `
 
-This restriction isn't really restricting when it comes to bash, as we have a lot we can do with only speical characters (read more about it here). But this is much simpler than a regular bash jail, as we have the Make language in our side to help here a little.  
+This restriction isn't really restricting when it comes to bash, as we have a lot we can do with only speical characters (read more about it [here](https://github.com/C0d3-Bre4k3rs/Misc)). But this is much simpler than a regular bash jail, as we have the Make language in our side to help here a little.  
 
 In Make, there are [Automatic Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html) - variables that are different for each rule that is executed, based on the target and prerequisites of the rule. These variables are really useful when writing a Makefile to compile your project...  
 And also to places in which you can only use special characters in a make-bash jail.  
