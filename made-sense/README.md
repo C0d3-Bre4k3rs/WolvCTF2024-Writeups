@@ -11,7 +11,7 @@ ___
 
 In this challenge we receive a site (and it's code), that allows us to write and execute a GNU Make recipe, with some restrictions.  
 We need to bypass those restrictions and get the flag.  
-Sssentially, a Make jail.  
+Essentially, a Make jail.  
 
 ## Solution
 
@@ -32,7 +32,9 @@ Lets break this Makefile down:
 
 `.PHONY: TARGET` - this part make sure each time the `make` command is being run, the recipe is executed. You can read more about in the [official documentation](https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html) (its really good).  
 `TARGET: flag.txt` - this defines a [recipe](https://www.gnu.org/software/make/manual/html_node/Recipes.html) - the target name is the input given by the user, and the dependecy is `flag.txt` - the flag!  
-`CONTENT` - this is the recipe's content given by the user, that is then being run by in the shell. What shell? the shell defined in the first line of this Makefile, in this case `bash`.
+`CONTENT` - this is the recipe's content given by the user, that is then being run by in the shell. What shell? the shell defined in the first line of this Makefile, in this case `bash`.  
+  
+Then, it runs the makefile it created and shows us both `STDOUT` and `STDERR`.  
 
 ### Solution
 On first glance, this challenge seems very easy (and it is, as it is the first one out of four).  
@@ -44,4 +46,5 @@ if re.search(r'flag', code):
 ```  
 We can easily bypass this with a simple string concatination: `cat "fla""g.txt"`.  
 Bingo! we get the flag: 
-`wctf{m4k1ng_vuln3r4b1l1t135}`
+`wctf{m4k1ng_vuln3r4b1l1t135}`    
+To the next one! ;)
