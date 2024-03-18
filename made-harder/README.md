@@ -30,4 +30,5 @@ So instead of writing `cat flag.txt`, we can set the rule target to be `cat` and
 `$@ $<`  
 This is being evaluated to `cat flag.txt`, since the `$@` is a variables which means the target name, and `$<` means the first prerequisite (which conveniently happens to be `flag.txt`).  
 Voilà! We get the flag: `wctf{s0_m4ny_v4r14bl35}`  
-To the next one! ;)
+  
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/made-with-love)! ;)
