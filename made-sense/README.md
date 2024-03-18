@@ -35,9 +35,9 @@ Lets break this Makefile down:
 `CONTENT` - this is the recipe's content given by the user, that is then being run by in the shell. What shell? the shell defined in the first line of this Makefile, in this case `bash`.
 
 ### Solution
-In that case this is very easy, this challenge seems very easy! why not just print the `flag.txt`.  
-But, upon trying to send `cat flag.txt` as the content we don't get the flag. 
-this is becasue the content is being checked to not contain the string `"flag"`:
+On first glance, this challenge seems very easy (and it is, as it is the first one out of four).  
+But, upon trying to send `cat flag.txt` (to get the flag) as the content we just get `no` in response. 
+This is becasue the content is being checked to not contain the string `"flag"`:
 ```python
 if re.search(r'flag', code):
     return 'no'
