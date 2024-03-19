@@ -25,8 +25,8 @@ We need to submit an input that has to follow these requirements:
 If we can match the ouput of the last block of the AES encryption, and our input has started with the string: `"GET FILE: flag.txt"` we get the flag. Otherwise, the last block of the AES encryption is being shown to us.  
 
 So, we basically need to find the output of a random AES encryption on our input.. How is that possible?! Especially when each input needs to be unique.  
-We can't manipulate the future.. can we?  
-Before I will showcase the solution, a basic understanding of how the `AES EBC` mode works is needed (the mode that is being used in our case), so we can properly try and exploit this algorithm and it's usecase.  
+We can't manipulate the output of a RANDOM encryption.. can we?  
+Before we will showcase the solution, a basic understanding of how the `AES EBC` mode works is needed (the mode that is being used in our case), so we can properly try and exploit this algorithm and it's usecase.  
  
 ### AES (EBC) mode
 
