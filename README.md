@@ -4,7 +4,7 @@
 
 .PHONY: WolvCTF2024 C0d3 Bre4k3rs
 
-TEAM := "5h4d0w N0am!ster L3d ProfessorZak talsim"
+TEAM := "5h4d0w N0am!ster L3d Pr0f3550rZak talsim"
 POINTS := "6907"
 PLACE := "17"
 
