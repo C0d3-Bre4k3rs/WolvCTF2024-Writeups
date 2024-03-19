@@ -35,6 +35,7 @@ Lets break this Makefile down:
 `CONTENT` - this is the recipe's content given by the user, that is then being run by in the shell. What shell? the shell defined in the first line of this Makefile, in this case `bash`.  
   
 Then, it runs the makefile it created and shows us both `STDOUT` and `STDERR`.  
+This makefile layout is the same, for all the following challenges.  
 
 ### Solution
 On first glance, this challenge seems very easy (and it is, as it is the first one out of four).  
