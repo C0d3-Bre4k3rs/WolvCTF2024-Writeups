@@ -1,7 +1,7 @@
 
 # Misc: befuddled1
-solvers: [L3d](https://github.com/imL3d)  
-writeup-writer: [Pr0f3550rZak](https://github.com/Pr0f3550rZak)  
+solvers: [Pr0f3550rZak](https://github.com/Pr0f3550rZak)  
+writeup-writer:[L3d](https://github.com/imL3d)   
 ___
 **Author:** doubledelete  
 **Description:**
@@ -22,8 +22,10 @@ In this challenge we are asked to input the Befunge code to be compile, with a l
 After a quick glace of the syntax, we find how to create a loop, and pop the stack. This is the result:  
 `>,<`  
 
-`>` - means move right.  
+`>` - means increment program counter.  
 `,` - means pop the stack.  
-`<` - means move left.  
+`<` - decrement program counter.  
   
 And we get the flag: `wctf{my_s0lv3_l00k5_l1k3_4_cut3_f4c3_>,<}`.  
+  
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/befuddled2) ➡️
