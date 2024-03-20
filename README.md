@@ -12,7 +12,7 @@ team:: WolvCTF2024
         @echo The $@ memebers are: $(TEAM)
         @echo They got $(POINTS) points
         @echo And reached place $(PLACE)
-        @echo Joined 24h late ";)"
+        @echo Joined 20h late ";)"
 
 WolvCTF2024:
         @echo CTF URL: https://wolvctf.io
