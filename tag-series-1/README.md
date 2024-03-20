@@ -6,17 +6,13 @@ ___
 **Author:** retu2libc  
 **Description:**
 > Don't worry, the interns wrote this one.  
-
 **files (copy):** [chal.py](files/chal.py)  
-
-In this challenge we need to send a message and the last block of it's AES encryption.  
-If they match we receive the flag!  
 
 ## Solution
 
 ### Preview
 
-This challenge gives us a TCP connection to a server that runs a program that lets us input some strings 3 times in a row:  
+In this challenge we need to input a plaintext string and a guess to the last block of it's AES encryption 3 times in a row - if one of those guesses match we get the flag:  
   
 For each 3 attempts a new random key is generated (16 bytes).  
 We need to submit an input that has to follow these requirements:  
