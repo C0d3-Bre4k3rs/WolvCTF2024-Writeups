@@ -9,7 +9,7 @@ ___
 
 **files (copy):** [chal.py](files/chal.py)  
 
-In this challenge we need to send a message and the last block of an AES encryption.  
+In this challenge we need to send a message and the last block of it's AES encryption.  
 If they match we receive the flag!  
 
 ## Solution
