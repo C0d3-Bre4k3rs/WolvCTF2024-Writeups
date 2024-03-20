@@ -45,7 +45,7 @@ Our goal is to find a way to find out what the last part of the block encryption
 This is only possible if we have sent some other payload beforehand, that has resulted in the same output that this payload will return - since we can't perdict the output of the Block Cipher Encryption itself.  
 Putting it shortly: **We need to give two different payloads, that will result in the same last block of ciphertext.**
   
-This task is fairly easy, as the none of the previous blocks in the AES (EBC) mode encryption, nor the amount of the previous blocks really affect the output of the blocks that come after it. This implies that as long as we keep the last block the unchanged, the result will be the same!  
+This task is fairly easy, as none of the previous blocks in the AES (EBC) mode encryption, nor the amount of the previous blocks really affect the output of the blocks that come after it. This implies that as long as we keep the last block the unchanged, the result will be the same!  
 Armed with this knowledge, we create the following script:  
 ```python
 from pwn import *
