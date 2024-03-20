@@ -12,7 +12,7 @@ ___
 
 ### Preview
 
-In this challenge we need to input a plaintext string and a guess to the last block of it's AES encryption 3 times in a row - if one of those guesses match we get the flag:  
+In this challenge we need to input a plaintext string and a guess to the last block of it's AES (ECB) encryption 3 times in a row - if one of those guesses match we get the flag:  
   
 For each 3 attempts a new random key is generated (16 bytes).  
 We need to submit an input that has to follow these requirements:  
@@ -23,14 +23,14 @@ If we can match the ouput of the last block of the AES encryption, and our plain
 
 So, we basically need to find the output of a random AES encryption on our input.. How is that possible?! Especially when each input needs to be unique.  
 We can't manipulate the output of a RANDOM encryption.. can we?  
-Before we will showcase the solution, a basic understanding of how the `AES EBC` mode works is needed (the mode that is being used in this case), so we can properly try and exploit this algorithm and it's usecase.  
+Before we will showcase the solution, a basic understanding of how the `AES ECB` mode works is needed (the mode that is being used in this case), so we can properly try and exploit this algorithm and it's usecase.  
  
-### AES (EBC) mode
+### AES (ECB) mode
 
-The Advanced Encryption Standard (AES) is a symmetric encryption algorithm that was established by NIST in 2001. It has five standard modes of operation, but here we give an overview of the simplest mode, EBC.  
-While using EBC mode, the message is divided into blocks, and each block is encrypted separately with the given key, as shown in the image below:  
+The Advanced Encryption Standard (AES) is a symmetric encryption algorithm that was established by NIST in 2001. It has five standard modes of operation, but here we give an overview of the simplest mode, ECB.  
+While using ECB mode, the message is divided into blocks, and each block is encrypted separately with the given key, as shown in the image below:  
 
-![EBC Encryption](_images/ecb.png)  
+![ECB Encryption](_images/ecb.png)  
 
 For our purposes in the tag-series challenges, we don't really need to know much about the [Block Cipher algorithm](https://en.wikipedia.org/wiki/Block_cipher), apart from it being a *deterministic algorithm*, meaning that if we give it the same key and the same input, it will always give us the same output.  
   
@@ -42,7 +42,7 @@ Our goal is to find a way to find out what the last part of the block encryption
 This is only possible if we have sent some other payload beforehand, that has resulted in the same output that this payload will return - since we can't perdict the output of the Block Cipher Encryption itself.  
 Putting it shortly: **We need to give two different payloads, that will result in the same last block of ciphertext.**
   
-This task is fairly easy, as none of the previous blocks in the AES (EBC) mode encryption, nor the amount of the previous blocks really affect the output of the blocks that come after it. This implies that as long as we keep the last block the unchanged, the result will be the same!  
+This task is fairly easy, as none of the previous blocks in the AES (ECB) mode encryption, nor the amount of the previous blocks really affect the output of the blocks that come after it. This implies that as long as we keep the last block the unchanged, the result will be the same!  
 Armed with this knowledge, we create the following script:  
 ```python
 from pwn import *
@@ -50,7 +50,7 @@ from pwn import *
 HOST, PORT = 'tagseries1.wolvctf.io', 1337
 
 FIRST_BLOCK = b'GET FILE: flag.t'
-LAST_BLOCK = b'xt' + b'A'*14
+LAST_BLOCK = b'xt' + b'give_me_flag:)'
 
 conn = connect(HOST, PORT)
 
