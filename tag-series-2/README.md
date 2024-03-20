@@ -12,7 +12,7 @@ ___
 
 ### Preview
 
-*It is recommended to read the [first challenge](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/tag-series-1) in this series before reading this one*
+*It is recommended to read the [first challenge](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/tag-series-1) in this series before reading this one.*
 
 This challenge is very similar to the first one; we need to input a plaintext string and a guess to the last block of it's AES (CBC) encryption 4 times in a row - if one of those guesses match we get the flag.  
 
