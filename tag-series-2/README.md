@@ -42,7 +42,7 @@ After looking further at the `CBC` mode of encryption and the given restrictions
 2. It **is** possible to get the same last block of ciphertext from two different plaintexts, we just have to make sure the two inputs to that "part of the chain" are the same (take a look at the illustartaion below).
 3. The two plaintexts that will yield the same result will have the same length, since the last block of the plaintext needs to be the same (and the length of the plaintext is the last block).
 
-<img src="_images/illu1.png" alt="Illu1" width="500"/>
+<img src="_images/illu1.png" alt="Illu1" width="450"/>
   
 Because the last block will always contain the legth, our goal is to try and create the same ciphertext of the block that came before it (becaues it's the other part of the XOR), with two different plaintext inputs.  
 For this, we have to do some sort of computation. XOR is commutative operation, we can leverage this fact to our advantage.  
