@@ -1,1 +1,39 @@
-### To be added
+
+# Crypto: tag-series-1
+solver: [N04M1st3r](https://github.com/N04M1st3r)  
+writeup-writer: [L3d](https://github.com/imL3d)   
+___
+**Author:** retu2libc  
+**Description:**
+> Don't worry, the interns wrote this one.  
+**files (copy):** [chal.py](files/chal.py)  
+
+## Solution
+
+### Preview
+
+*It is recommended to read the [first challenge](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/tag-series-1) in this series before reading this one*
+
+This challenge is very similar to the first one; we need to input a plaintext string and a guess to the last block of it's AES (CBC) encryption 4 times in a row - if one of those guesses match we get the flag.  
+
+The differences from the first challenge:
+1. AES encryption with mode CBC is used, instead of ECB.
+2. We get 4 tries instead of 3.
+3. To each plaintext given it's length is being added to the end before the encryption. 
+4. The plaintext to get the flag needs to start with a shorter string: `"GET: flag.txt"`
+
+And again, before we will showcase the solution, an understanding of how the `AES CBC` mode works is needed, so we can properly try and exploit this algorithm and it's usecase.  
+
+### AES (CBC) mode
+
+The CBC mode fixes some of the problems with the lack of `cryptographic diffusion` that EBC mode had. Instead of each plaintext block being enciphered on its own, it is being XORed with the previous ciphertext, and only then being encrypted (the first block is being XORed with a random Initialization Vector), as shown in the image below:  
+
+![CBC Encryption](_images/cbc.png)  
+
+Again, for our purposes in the tag-series challenges, we don't really need to know much about the [Block Cipher algorithm](https://en.wikipedia.org/wiki/Block_cipher), apart from it being a *deterministic algorithm*, meaning that if we give it the same key and the same input, it will always give us the same output.  
+  
+The chagne from `ECB` mode to `CBC` mode fixes the exploit we used at the previous challenge - because each part affects the following one it seems as though we cannot have two different plaintexts produce the same result.    
+
+### The exploit
+
+

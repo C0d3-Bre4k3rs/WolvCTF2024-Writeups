@@ -1,6 +1,6 @@
 
 # Crypto: tag-series-1
-solvers: [N04M1st3r](https://github.com/N04M1st3r)  
+solver: [N04M1st3r](https://github.com/N04M1st3r)  
 writeup-writer: [L3d](https://github.com/imL3d)   
 ___
 **Author:** retu2libc  

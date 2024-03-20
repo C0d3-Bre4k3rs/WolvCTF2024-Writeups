@@ -1,6 +1,6 @@
 
 # Misc: made-sense
-solvers: [L3d](https://github.com/imL3d)  
+solver: [L3d](https://github.com/imL3d)  
 writeup-writer: [L3d](https://github.com/imL3d)  
 ___
 **Author:** doubledelete  

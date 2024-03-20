@@ -1,6 +1,6 @@
 
 # Misc: befuddled2
-solvers: [Pr0f3550rZak](https://github.com/Pr0f3550rZak)  
+solver: [Pr0f3550rZak](https://github.com/Pr0f3550rZak)  
 writeup-writer: [L3d](https://github.com/imL3d)  
 ___
 **Author:** doubledelete  
