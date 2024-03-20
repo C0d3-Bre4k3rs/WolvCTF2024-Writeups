@@ -74,7 +74,7 @@ print(flag)
 conn.close()
 ```  
 
-This first gets the ciphertext output of the last block of our payload, then it adds another block before it and and receives the same result!  
+This first gets the ciphertext output of the last block of our payload, then it adds another block before it, and receives the same result!  
 Note, that the first block and the second block togther both create the requested string that should be at the start of the plaintext.  
   
 We get the flag🚩: `wctf{C0nGr4ts_0n_g3tt1ng_p4st_A3S}`  
