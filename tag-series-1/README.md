@@ -62,7 +62,7 @@ conn.recvuntil(b'== proof-of-work: disabled ==')
 conn.sendline(LAST_BLOCK)
 conn.sendline(b'Irrelevant')
 
-conn.readline() # Excess 
+conn.readline()
 result = conn.readline()
 
 conn.sendline(FIRST_BLOCK + LAST_BLOCK)
