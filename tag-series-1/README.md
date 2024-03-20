@@ -30,5 +30,13 @@ Before we will showcase the solution, a basic understanding of how the `AES EBC`
  
 ### AES (EBC) mode
 
+The Advanced Encryption Standard (AES) is a symmetric encryption algorithm that was established by NIST in 2001. It has five standard modes of operation, but here we give an overthetop explanation for the simplest mode, EBC.  
+While using EBC encryption, the message is divided into blocks, and each block is encrypted separately with the given key, as shown in the image below:  
+
+![EBC Encryption](_images/ecb.png)  
+
+For our purposes in the tag-series challenges, we don't really need to know much about the [Block Cipher algorithm](https://en.wikipedia.org/wiki/Block_cipher), apart from it being a *deterministic algorithm*, meaning that if we give it the same key and the same input, it will always give us the same output.  
+  
+ECB is the least recommended encryption mode, as it's main disadvantage *cryptographic diffusion* - it can fail to hide data patterns between the text and the ciphertext.
 
 ### The exploit
