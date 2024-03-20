@@ -58,6 +58,44 @@ As it happens, the first part is really easy - we have four tries that we can us
 4. For the second time we want to do the same, but swapped. This will equal the same last block of ciphertext we recieved at the previous try... And bingo!  
 
 NOTE: for this both the inputs that created A and B need to have the same length - the final payload will contain this input, and the lengths of the two final payloads need to be the same for us to get the same result.  
-This is an illustartion of the final payloud:  
+This is an illustartion of the final payload:  
 
 <img src="_images/illu3.png" alt="Illu3" width="700"/>
+
+The implementation  of the exploit we devised in code:  
+```python 
+from pwn import *
+
+INPUT1 = b"GET: flag.txt" + b"pad" # The last plaintext we send, is obligated start with this string to get the flag 
+INPUT2 = b"D" * 16
+LEN16 = b'\x00' * 15 + b'\x10' # The length of our inputs
+
+con = connect('tagseries2.wolvctf.io', 1337)
+
+con.recvuntil(b'disabled ==')
+con.recvline()
+
+con.sendline(INPUT1)
+con.sendline(b'irrelevant')
+A = con.recvline()[:-1] # the output of INPUT1 + ITS_LEN
+
+con.sendline(INPUT2)
+con.sendline(b'irrelevant')
+B = con.recvline()[:-1] # the output of INPUT2 + ITS_LEN
+
+# The parts that make B then A
+con.sendline(INPUT2 + LEN16 + A)
+con.sendline(b'irrelevant')
+result = con.recvline()[:-1]
+
+# The parts that make A then B
+con.sendline(INPUT1 + LEN16 + B)
+con.sendline(result) # This has the same result as the one we performed above
+
+flag = con.recvline()[:-1]
+print(flag)
+
+con.close()
+```
+  
+We get the flag🚩: `wctf{W0w_1_w4s_ev3n_u51ng_CBC}`
