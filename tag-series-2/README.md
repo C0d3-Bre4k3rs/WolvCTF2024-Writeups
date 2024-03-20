@@ -28,7 +28,7 @@ And again, before we will showcase the solution, an understanding of how the `AE
 
 The CBC mode fixes some of the problems with the lack of *cryptographic diffusion* that EBC mode had. Instead of each plaintext block being enciphered on its own, it is being XORed with the previous ciphertext, and only then being encrypted (the first block is being XORed with a random Initialization Vector), as shown in the image below:  
 
-![CBC Encryption](_images/cbc.png)  
+<img src="_images/cbc.png" alt="CBC Encryption" width="700"/>
 
 Again, for our purposes in the tag-series challenges, we don't really need to know much about the [Block Cipher algorithm](https://en.wikipedia.org/wiki/Block_cipher), apart from it being a *deterministic algorithm*, meaning that if we give it the same key and the same input, it will always give us the same output.  
   
