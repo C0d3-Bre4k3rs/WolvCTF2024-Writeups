@@ -8,7 +8,7 @@ TEAM := "5h4d0w N0am!ster L3d Pr0f3550rZak talsim"
 POINTS := "6907"
 PLACE := "17"
 
-team:: WolvCTF2024
+team: WolvCTF2024
         @echo The $@ memebers are: $(TEAM)
         @echo They got $(POINTS) points
         @echo And reached place $(PLACE)
