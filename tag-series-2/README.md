@@ -50,5 +50,10 @@ For example, as shown in the illustartion below, both the blocks of ciphertexts 
 
 <img src="_images/illu2.png" alt="Illu2" width="500"/>
 
-So, the only thing left to do is just find a way to get B and A (and compute them via the algorithm), and to put the pieces together!  
-
+So, the only thing left to do is just find a way to get `A` and `B`, and to put the pieces together!  
+  
+As it happens, the first part is really easy - we have four tries that we can use in order to compute A, and B.
+The ciphertext we will send is `our_input + LENGTH`. And both A, and B will be the last block of the ciphertext resulted by this.  
+Then we just need to recreate the terms that allowed the cratoin of A or B at the first time then add the other ciphertext we didn't create. This will give us the result we want to send the next time!  
+For the second time we want to do the same, but swapped. This will equal the same last block of ciphertext we recieved at the previous try... And bingo!  
+  
