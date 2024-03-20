@@ -37,10 +37,9 @@ The change from `ECB` mode to `CBC` mode fixes the exploit we used at the previo
 ### The exploit
 
 At first glance, this challenge seems very discouraging - we need to find two differnet plaintext inputs that will give us the same last block of ciphertext, but every little change in the previous blocks affects the outcome!    
-After looking further at the `CBC` mode of encryption and the given restrictions, we can come to 3 subtle but important realizations:  
+After looking further at the `CBC` mode of encryption and the given restrictions, we can come to 2 subtle but important realizations:  
 1. The same 2 inputs to the XOR and then the Block Encryption, will yield the same ciphertext.  
 2. It **is** possible to get the same last block of ciphertext from two different plaintexts, we just have to make sure the two inputs to that "part of the chain" are the same (take a look at the illustartaion below).
-3. The two plaintexts that will yield the same result will have the same length, since the last block of the plaintext needs to be the same (and the length of the plaintext is the last block).
 
 <img src="_images/illu1.png" alt="Illu1" width="450"/>
   
