@@ -42,4 +42,4 @@ After looking further at the `CBC` mode of encryption and the given restrictions
 2. It **is** possible to get the same last block of ciphertext from two different plaintexts, we just have to make sure the two inputs to that "part of the chain" are the same (take a look at the illustartaion below).
 3. The two plaintexts that will yield the same result will have the same length, since the last block of the plaintext needs to be the same (and the length of the plaintext is the last block).
 
-![Illu1](_images/illu1.png)
+<img src="_images/illu1.png" alt="Illu1" width="450"/>
