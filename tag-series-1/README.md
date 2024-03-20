@@ -22,7 +22,8 @@ For each 3 attempts a new random key is generated (16 bytes).
 We need to submit an input that has to follow these requirements:  
 - Be unique from the other previous tries
 - Be aligned blocks of 16 bytes
-If we can match the ouput of the last block of the AES encryption, and our input has started with the string: `"GET FILE: flag.txt"` we get the flag. Otherwise, the last block of the AES encryption is being shown to us.  
+  
+If we can match the ouput of the last block of the AES encryption, and our input has started with the string: `"GET FILE: flag.txt"` we get the flag. Otherwise, **the last block of the AES encryption is being shown to us.**  
 
 So, we basically need to find the output of a random AES encryption on our input.. How is that possible?! Especially when each input needs to be unique.  
 We can't manipulate the output of a RANDOM encryption.. can we?  
@@ -75,7 +76,8 @@ conn.close()
 ```  
 
 This first gets the ciphertext output of the last block of our payload, then it adds another block before it, and receives the same result!  
-Note, that the first block and the second block togther both create the requested string that should be at the start of the plaintext.  
+Note, that the first block and the second block togther both create the requested string that should be at the start of the plaintext:  
+`b'GET FILE: flag.t' + b'xt...'`
   
 We get the flag🚩: `wctf{C0nGr4ts_0n_g3tt1ng_p4st_A3S}`  
   
