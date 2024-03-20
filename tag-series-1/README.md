@@ -79,4 +79,4 @@ Note, that the first block and the second block togther both create the requeste
   
 We get the flag🚩: `wctf{C0nGr4ts_0n_g3tt1ng_p4st_A3S}`  
   
-To the next one ➡️
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/tag-series-2) ➡️
