@@ -53,7 +53,7 @@ So, the only thing left to do is just find a way to get `A` and `B`, and to put 
   
 As it happens, the both parts is really easy (at this point xD) - we have four tries that we can use in order to compute A, and B.  
 1 + 2. The plaintext that will encrypted is `our_input + ITS_LENGTH`. Both A, and B will be the last block of the ciphertext resulted by this, respectively.  
-3. Then we just need to recreate the terms that allowed the creation of A or B at the first time then add the other ciphertext we didn't create. This will give us the result we want to send the next time!  
+3. Then we just need to **recreate the terms** that allowed the creation of A or B at the first time then add the other ciphertext we didn't create. This will give us the result we want to send the next time!  
 4. For the second time we want to do the same, but swapped. This will equal the same last block of ciphertext we recieved at the previous try... And bingo!  
 
 NOTE: for this both the inputs that created A and B need to have the same length - the final payload will contain this input, and the lengths of the two final payloads need to be the same for us to get the same result.  
