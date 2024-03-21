@@ -1,5 +1,7 @@
 # game-graphics-debugging
 
+*this is a clone. check out the original! [https://github.com/Om3rR3ich/CTF-Writeups/blob/main/WolvCTF%202024/game_graphics_debugging.md](https://github.com/Om3rR3ich/CTF-Writeups/blob/main/WolvCTF%202024/game_graphics_debugging.md)*
+
 solver: [5h4d0w ](https://github.com/Om3rR3ich)  
 writeup-writer: [5h4d0w](https://github.com/Om3rR3ich)   
 
