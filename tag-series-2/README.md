@@ -101,4 +101,6 @@ print(flag)
 con.close()
 ```
   
-We get the flag🚩: `wctf{W0w_1_w4s_ev3n_u51ng_CBC}`
+We get the flag🚩: `wctf{W0w_1_w4s_ev3n_u51ng_CBC}`  
+  
+To the [next one](https://github.com/C0d3-Bre4k3rs/WolvCTF2024-Writeups/tree/main/tag-series-3) ➡️
