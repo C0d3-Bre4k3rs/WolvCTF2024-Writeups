@@ -1,7 +1,7 @@
 
 # Misc: befuddled1
 solver: [Pr0f3550rZak](https://github.com/Pr0f3550rZak)  
-writeup-writer:[L3d](https://github.com/imL3d)   
+writeup-writer: [L3d](https://github.com/imL3d)   
 ___
 **Author:** doubledelete  
 **Description:**
